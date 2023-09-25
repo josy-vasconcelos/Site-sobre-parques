@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Item</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="icone.ico" type="image/x-icon">
+    <style>
+        .item-description {
+            margin-top: 20px;
+        }
+        body{
+            background-color: #6b6363;
+        }
+        .navbar {
+            background-color: #fbfbfb;
+        }
+        
+        .card {
+            color: #223459;
+        }
+        
+        .btn {
+            color: #223459;
+        }
+        
+        .navbar-red {
+            background: linear-gradient(to bottom, #d72020, #eb6e6e);
+        }
+        
+        .navbar-red .navbar-nav .nav-link {
+            color: #FFFFFF;
+        }
+        
+        .navbar-red .navbar-nav .nav-link.active,
+        .navbar-red .navbar-nav .nav-link:focus {
+            color: #FFFFFF;
+            background-color: transparent;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-red col-12">
+            <img src="logo-parque.png" alt="" width="100" height="100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Página inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Álbuns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mapa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="itemCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="FIREWHIP1.JPG" class="d-block w-100" alt="Item 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="FIREWHIP2.jpg" class="d-block w-100" alt="Item 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="FIREWHIP3.JPG" class="d-block w-100" alt="Item 3">
+                        </div>
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#itemCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#itemCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>FIREWHIP</h2>
+                <p class="item-description">DA Fire Whip é uma montanha-russa invertida do parque Beto Carrero World, localizado em Penha, Santa Catarina. É uma SLC Standard, com 689 metros de extensão, 33,3 metros de altura que atinge uma velocidade de aproximadamente 80 km/h.</p>
+                <button class="btn btn-danger text-black-50 " id="btnAnterior">Anterior</button>
+                <button class="btn btn-danger text-black-50 " id="btnProximo">Próximo</button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <p>Desenvolvido por Josiane Vasconcelos</p>
+                    <p>&copy; 2023 Todos os direitos reservados</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h2>Nos siga nas redes sociais:</h2>
+                    <ul>
+                        <img src="whatsapp.png" alt="whatsapp">
+                        <img src="facebook.png" alt="facebook">
+                        <img src="instagram.png" alt="instagram">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#itemCarousel').carousel();
+
+            $('#btnAnterior').click(function () {
+                $('#itemCarousel').carousel('prev');
+            });
+
+            $('#btnProximo').click(function () {
+                $('#itemCarousel').carousel('next');
+            });
+        });
+    </script>
+</body>
+</html>
